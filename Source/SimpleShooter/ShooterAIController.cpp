@@ -6,8 +6,9 @@
 
 void AShooterAIController::Tick(float DeltaTime)
 {
-	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
+	Super::Tick(DeltaTime);
 
+	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 	MoveToActor(PlayerPawn, 200);
 }
 
